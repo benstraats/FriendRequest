@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9E00"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/mainLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/fr_logo" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="21dp"
+        android:layout_marginRight="31dp"
+        android:onClick="createUser"
+        android:text="@string/confirm" />
+
+    <EditText
+        android:id="@+id/editBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editBox3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="@string/retype_password"
+        android:inputType="textPassword"
+        android:maxLength="30" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editBox4"
+        android:layout_below="@+id/editBox2"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLength="30" />
+
+    <EditText
+        android:id="@+id/editBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editBox3"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="@string/first_last_name"
+        android:inputType="textImeMultiLine|textPersonName"
+        android:maxLength="50" />
+
+    <EditText
+        android:id="@+id/editBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editBox2"
+        android:layout_alignLeft="@+id/editBox2"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textImeMultiLine"
+        android:maxLength="30" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignRight="@+id/editBox2"
+        android:text="@string/remember_me" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editBox4"
+        android:layout_below="@+id/checkBox1" />
+
+</RelativeLayout>
